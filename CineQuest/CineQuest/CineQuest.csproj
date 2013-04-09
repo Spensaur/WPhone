@@ -97,6 +97,14 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Chittagongposter.jpg" />
+    <Content Include="Images\dvd_icon_small.png" />
+    <Content Include="Images\events_icon_small.png" />
+    <Resource Include="Images\Everybodyinourfamilyposter.jpg" />
+    <Content Include="Images\film_icon2.png" />
+    <Content Include="Images\forums_small.png" />
+    <Resource Include="Images\Outcoldposter.jpg" />
+    <Content Include="Images\schedule.png" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

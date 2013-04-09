@@ -23,13 +23,21 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="ListTitle" Text="{Binding LineOne}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="CineQuest" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="ListTitle" Text="{Binding LineOne}" Margin="9,-7,0,0" TextWrapping="Wrap" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel contains details text. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock x:Name="ContentText" Text="{Binding LineThree}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <StackPanel Margin="0,0,0,17" Width="432" Height="Auto" Orientation="Vertical">
+                <TextBlock Text="{Binding LineFour}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="Schedule" Margin="10,10,0,0" Style="{StaticResource PhoneTextTitle2Style}" />
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox />
+                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                    <TextBlock Text="{Binding LineThree}" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
     </Grid>
  
