@@ -1,0 +1,14 @@
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\ApplicationIcon.png
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Background.png
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\CineQuest.dll
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\CineQuest.pdb
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\AppManifest.xaml
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\CineQuest.xap
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\App.g.i.cs
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\DetailsPage.g.i.cs
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\MainPage.g.i.cs
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.g.resources
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.dll
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
