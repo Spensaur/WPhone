@@ -22,7 +22,8 @@ namespace XMLTest
         {
             
         }
-        String text = "";
+        XDocument xdoc;
+        //String text = "";
         //TextBlock myTextBlock;
         public void getData(String url, TextBlock t)
         {
@@ -36,11 +37,23 @@ namespace XMLTest
         {
             if (e.Error == null)
             {
-                XDocument xdoc = XDocument.Parse(e.Result, LoadOptions.None);
+                XElement XmlTweet = XElement.Parse(e.Result);
 
-                IEnumerable<XElement> elements= xdoc.Element("quiz").Elements("question");
+              /*  listBox1.ItemsSource = from tweet in XmlTweet.Descendants("item")
+                                       select new FlickrData
+                                       {
+                                           ImageSource = tweet.Element(ns + "thumbnail").Attribute("url").Value,
+                                           Message = tweet.Element("description").Value,
+                                           UserName = tweet.Element("title").Value,
+                                           PubDate = DateTime.Parse(tweet.Element("pubDate").Value)
+                                       }; 
+              */  
+                
+                //xdoc = XDocument.Parse(e.Result, LoadOptions.None);
 
-                foreach (XElement el in elements)
+                //IEnumerable<XElement> elements= xdoc.Element("quiz").Elements("question");
+
+                /*foreach (XElement el in elements)
                 {
                     text += el.Element("text").Value + "\n";
                     foreach (XElement ele in el.Elements("choice"))
@@ -50,7 +63,7 @@ namespace XMLTest
                     //break;
                 }
 
-                ((TextBlock)e.UserState).Text = text;
+                ((TextBlock)e.UserState).Text = text;*/
 
                 
                 // do something with the XDocument here
