@@ -12,3 +12,7 @@ D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQue
 D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.dll
 D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
 D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Application_TileImage_173x173.png
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_173x173.png
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_62x62.png
+D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_99x99.png

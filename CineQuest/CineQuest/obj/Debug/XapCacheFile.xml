@@ -1,13 +1,21 @@
-﻿<xapCache source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\CineQuest.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/9/2013 12:01:27 AM">
-  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/8/2013 10:55:11 PM" />
-  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Background.png" archivePath="Background.png" lastWriteTime="4/8/2013 10:54:34 PM" />
+﻿<xapCache source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\CineQuest.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/11/2013 12:09:26 AM">
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/11/2013 12:09:26 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\Icons\Application_TileImage_173x173.png" archivePath="Images\Icons\Application_TileImage_173x173.png" lastWriteTime="4/11/2013 12:03:25 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\Icons\Marketplace_Device_62x62.png" archivePath="Images\Icons\Marketplace_Device_62x62.png" lastWriteTime="4/11/2013 12:04:01 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.dll" archivePath="CineQuest.dll" lastWriteTime="4/11/2013 12:09:20 AM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="4/8/2013 10:54:34 PM" />
-  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\obj\Debug\CineQuest.dll" archivePath="CineQuest.dll" lastWriteTime="4/9/2013 12:01:27 AM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\dvd_icon_small.png" archivePath="Images\dvd_icon_small.png" lastWriteTime="4/8/2013 9:28:28 PM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\events_icon_small.png" archivePath="Images\events_icon_small.png" lastWriteTime="4/8/2013 9:28:54 PM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\film_icon2.png" archivePath="Images\film_icon2.png" lastWriteTime="4/8/2013 9:29:05 PM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\forums_small.png" archivePath="Images\forums_small.png" lastWriteTime="4/8/2013 11:15:20 PM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\Icons\Marketplace_Device_173x173.png" archivePath="Images\Icons\Marketplace_Device_173x173.png" lastWriteTime="4/11/2013 12:03:13 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\Icons\Marketplace_Device_99x99.png" archivePath="Images\Icons\Marketplace_Device_99x99.png" lastWriteTime="4/11/2013 12:03:49 AM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Images\schedule.png" archivePath="Images\schedule.png" lastWriteTime="4/8/2013 9:29:09 PM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="4/8/2013 10:54:34 PM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Background.png" archivePath="Background.png" lastWriteTime="4/8/2013 10:54:34 PM" />
   <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/8/2013 10:55:11 PM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="4/8/2013 10:54:34 PM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_173x173.png" archivePath="Images\Icons\Marketplace_Device_173x173.png" lastWriteTime="4/11/2013 12:03:13 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_99x99.png" archivePath="Images\Icons\Marketplace_Device_99x99.png" lastWriteTime="4/11/2013 12:03:49 AM" />
+  <file source="D:\Users\insomnial\Documents\GitHub\WPhone\CineQuest\CineQuest\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="4/8/2013 10:54:34 PM" />
 </xapCache>
