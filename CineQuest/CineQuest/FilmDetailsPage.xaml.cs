@@ -14,10 +14,10 @@ using Microsoft.Phone.Controls;
 
 namespace CineQuest
 {
-    public partial class DetailsPage : PhoneApplicationPage
+    public partial class FilmDetailsPage : PhoneApplicationPage
     {
         // Constructor
-        public DetailsPage()
+        public FilmDetailsPage()
         {
             InitializeComponent();
         }
