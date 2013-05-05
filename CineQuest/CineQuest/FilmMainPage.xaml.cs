@@ -11,6 +11,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace CineQuest
 {
@@ -72,6 +75,7 @@ namespace CineQuest
             {
                 App.ViewModel.LoadData();
             }
+
         }
     }
 }
