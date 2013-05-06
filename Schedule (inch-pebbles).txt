@@ -9,3 +9,6 @@ Week 2 - March 25-31
 
 
 Week 3?
+
+Week Whatever
+  The Xml deserializer isn't cooperating with the XML files and I hate it.
