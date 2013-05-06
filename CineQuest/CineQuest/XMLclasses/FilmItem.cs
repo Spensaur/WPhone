@@ -25,5 +25,13 @@ namespace CineQuest
         {
             
         }
+
+        public FilmItem(String aone, String atwo, String athree, String afour)
+        {
+            lineone = aone;
+            linetwo = atwo;
+            linethree = athree;
+            linefour = afour;
+        }
     }
 }

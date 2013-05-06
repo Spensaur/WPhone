@@ -16,11 +16,20 @@ namespace CineQuest
     //This class creates a list of filmitems to populate the film page.
     public class FilmItemList
     {
-        public List<FilmItem> Itemlist = new List<FilmItem>();
+        public List<FilmItem> Itemlist;
         Festival festival;
         public FilmItemList(Festival f)
         {
             festival = f;
+        }
+
+        public FilmItemList()
+        {
+            Itemlist = new List<FilmItem>();
+            for (int i = 0; i < 10; i++)
+            {
+                Itemlist.Add(new FilmItem(i + "one", i + "two", i + "three", i + "four"));
+            }
         }
 
          public void populateList()
