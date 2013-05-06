@@ -90,7 +90,10 @@ namespace CineQuest
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Festival));
                 reader = XmlReader.Create(new StringReader(data.Result));
-                festival = (Festival)serializer.Deserialize(reader);
+                object deserialization = serializer.Deserialize(reader);
+                festival = (Festival)deserialization;
+                
+                //MessageBox.Show(festival., "festival", MessageBoxButton.OK);
                 FilmItemList list = new FilmItemList(festival);
                 list.populateList();
                 

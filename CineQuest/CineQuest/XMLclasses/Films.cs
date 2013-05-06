@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 
 namespace CineQuest
 {
+    [XmlRoot(ElementName = "films")]
     public class Films
     {
         [XmlArray("films")]

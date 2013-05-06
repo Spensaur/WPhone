@@ -8,9 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CineQuest
 {
+    [XmlRoot(ElementName = "film")]
     public class Film
     {
         [System.Xml.Serialization.XmlElementAttribute("id")]
@@ -21,6 +24,9 @@ namespace CineQuest
 
         [System.Xml.Serialization.XmlElement("description")]
         public string description { get; set; }
+
+        [System.Xml.Serialization.XmlElement("tagline")]
+        public string tagline { get; set; }
 
         [System.Xml.Serialization.XmlElement("genre")]
         public string genre { get; set; }
@@ -48,5 +54,8 @@ namespace CineQuest
 
         [System.Xml.Serialization.XmlElement("language")]
         public string language { get; set; }
+
+        [System.Xml.Serialization.XmlElement("film_info")]
+        public string film_info { get; set; }
     }
 }

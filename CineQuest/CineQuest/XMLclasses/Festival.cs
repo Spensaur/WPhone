@@ -14,7 +14,7 @@ namespace CineQuest
 {
     //[Serializable()]
     //This is the main head of the XML data object
-    [System.Xml.Serialization.XmlRoot("festival")]
+    [XmlRoot(ElementName = "festival")]
     public class Festival
     {
         [XmlElement("program_items")]

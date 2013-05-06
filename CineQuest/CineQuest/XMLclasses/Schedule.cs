@@ -8,10 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace CineQuest
 {
+    [XmlRoot(ElementName = "schedule")]
     public class Schedule
     {
         [System.Xml.Serialization.XmlElementAttribute("id")]
