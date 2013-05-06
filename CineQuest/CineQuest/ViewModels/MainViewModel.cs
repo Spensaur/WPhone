@@ -94,10 +94,10 @@ namespace CineQuest
                 festival = (Festival)deserialization;
                 
                 //MessageBox.Show(festival., "festival", MessageBoxButton.OK);
-                //FilmItemList list = new FilmItemList(festival);
-                //list.populateList();
+                FilmItemList list = new FilmItemList(festival);
+                list.populateList();
 
-                FilmItemList listTest = new FilmItemList();     /* test data */
+                //FilmItemList listTest = new FilmItemList();     /* test data */
                 
                 foreach (FilmItem item in listTest.Itemlist)
                 {
