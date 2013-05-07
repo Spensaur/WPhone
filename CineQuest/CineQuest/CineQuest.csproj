@@ -85,6 +85,7 @@
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="XMLclasses\Festival.cs" />
+    <Compile Include="XMLclasses\FestivalParser.cs" />
     <Compile Include="XMLclasses\FilmItem.cs" />
     <Compile Include="XMLclasses\FilmItemList.cs" />
   </ItemGroup>

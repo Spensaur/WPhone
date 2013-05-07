@@ -17,6 +17,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Linq;
 using System.IO;
+using CineQuest.XMLclasses;
 
 
 namespace CineQuest
@@ -86,28 +87,28 @@ namespace CineQuest
             }
             Festival festival = null;
             XmlReader reader = null;
+            FestivalParser parser = new FestivalParser();
 
             try
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(Festival));
+                /*XmlSerializer serializer = new XmlSerializer(typeof(Festival));
                 reader = XmlReader.Create(new StringReader(data.Result));
-                /* using XDocument - same problem abounds
-                XDocument doc = new XDocument();
-                doc = XDocument.Parse(data.Result);
-                festival = (Festival)serializer.Deserialize(doc.CreateReader());*/
-                MessageBox.Show(reader.ToString());     /* test code */
+                MessageBox.Show(reader.ToString());
                 
                 object deserialization = serializer.Deserialize(reader);
                 
                 MessageBox.Show(deserialization.ToString());
-                festival = (Festival)deserialization;
+                festival = (Festival)deserialization;*/
 
-                /*FilmItemList list = new FilmItemList(festival);
-                list.populateList();*/
-
-                FilmItemList listTest = new FilmItemList();     /* test data */
+                parser = new FestivalParser();
+                festival = parser.Parse(data.Result);
                 
-                foreach (FilmItem item in listTest.Itemlist)
+
+                FilmItemList list = new FilmItemList(festival);
+                list.populateList();
+
+                //FilmItemList listTest = new FilmItemList();     /* test data */
+                foreach (FilmItem item in list.Itemlist)
                 {
                     this.Items.Add(new ItemViewModel() { LineOne = item.lineone, LineTwo = item.linetwo, LineThree = item.linethree, LineFour = item.linefour });
                 }

@@ -32,6 +32,12 @@ namespace CineQuest
         /* Later */
         //[XmlElement("venue_Locations")]
         //public VenueLocations venueLocations { get; set; }
+
+        public Festival()
+        {
+            films = new Films();
+            schedules = new Schedules();
+        }
     }
 
     public class Films
