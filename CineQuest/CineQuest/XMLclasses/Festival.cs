@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace CineQuest
 {

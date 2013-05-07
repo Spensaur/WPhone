@@ -102,12 +102,12 @@ namespace CineQuest
                 MessageBox.Show(deserialization.ToString());
                 festival = (Festival)deserialization;
 
-                FilmItemList list = new FilmItemList(festival);
-                list.populateList();
+                /*FilmItemList list = new FilmItemList(festival);
+                list.populateList();*/
 
-                //FilmItemList listTest = new FilmItemList();     /* test data */
+                FilmItemList listTest = new FilmItemList();     /* test data */
                 
-                foreach (FilmItem item in list.Itemlist)
+                foreach (FilmItem item in listTest.Itemlist)
                 {
                     this.Items.Add(new ItemViewModel() { LineOne = item.lineone, LineTwo = item.linetwo, LineThree = item.linethree, LineFour = item.linefour });
                 }
