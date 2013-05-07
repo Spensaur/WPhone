@@ -9,14 +9,19 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace CineQuest
 {
-    [XmlRoot(ElementName = "schedules")]
     public class Schedules
     {
         [XmlArray("schedules")]
         [XmlArrayItem("schedule", typeof(Schedule))]
-        public Schedule[] schedules { get; set; }
+        public List<Schedule> schedules { get; set; }
+
+        public Schedules()
+        {
+            schedules = new List<Schedule>();
+        }
     }
 }

@@ -13,22 +13,21 @@ using System.Xml.Serialization;
 
 namespace CineQuest
 {
-    [XmlRoot(ElementName = "schedule")]
     public class Schedule
     {
-        [System.Xml.Serialization.XmlElementAttribute("id")]
+        [XmlElementAttribute("id")]
         public string id { get; set; }
         
-        [System.Xml.Serialization.XmlElementAttribute("program_item_id")]
+        [XmlElementAttribute("program_item_id")]
         public string programItemId { get; set; }
         
-        [System.Xml.Serialization.XmlElementAttribute("start_time")]
+        [XmlElementAttribute("start_time")]
         public string startTime { get; set; }
 
-        [System.Xml.Serialization.XmlElementAttribute("end_time")]
+        [XmlElementAttribute("end_time")]
         public string endTime { get; set; }
 
-        [System.Xml.Serialization.XmlElementAttribute("venue")]
+        [XmlElementAttribute("venue")]
         public string venue { get; set; }
     }
 }

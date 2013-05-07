@@ -13,49 +13,48 @@ using System.Xml.Serialization;
 
 namespace CineQuest
 {
-    [XmlRoot(ElementName = "film")]
     public class Film
     {
-        [System.Xml.Serialization.XmlElementAttribute("id")]
+        [XmlElementAttribute("id")]
         public string id { get; set; }
 
-        [System.Xml.Serialization.XmlElement("title")]
+        [XmlElement("title")]
         public string title { get; set; }
 
-        [System.Xml.Serialization.XmlElement("description")]
+        [XmlElement("description")]
         public string description { get; set; }
 
-        [System.Xml.Serialization.XmlElement("tagline")]
+        [XmlElement("tagline")]
         public string tagline { get; set; }
 
-        [System.Xml.Serialization.XmlElement("genre")]
+        [XmlElement("genre")]
         public string genre { get; set; }
 
-        [System.Xml.Serialization.XmlElement("imageURL")]
+        [XmlElement("imageURL")]
         public string imageURL { get; set; }
 
-        [System.Xml.Serialization.XmlElement("director")]
+        [XmlElement("director")]
         public string director { get; set; }
 
-        [System.Xml.Serialization.XmlElement("producer")]
+        [XmlElement("producer")]
         public string producer { get; set; }
 
-        [System.Xml.Serialization.XmlElement("cinematographer")]
+        [XmlElement("cinematographer")]
         public string cinematographer { get; set; }
 
-        [System.Xml.Serialization.XmlElement("editor")]
+        [XmlElement("editor")]
         public string editor { get; set; }
 
-        [System.Xml.Serialization.XmlElement("cast")]
+        [XmlElement("cast")]
         public string cast { get; set; }
 
-        [System.Xml.Serialization.XmlElement("country")]
+        [XmlElement("country")]
         public string country { get; set; }
 
-        [System.Xml.Serialization.XmlElement("language")]
+        [XmlElement("language")]
         public string language { get; set; }
 
-        [System.Xml.Serialization.XmlElement("film_info")]
+        [XmlElement("film_info")]
         public string film_info { get; set; }
     }
 }

@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Xml.Linq;
 using System.IO;
 
 
@@ -90,16 +91,23 @@ namespace CineQuest
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Festival));
                 reader = XmlReader.Create(new StringReader(data.Result));
-                object deserialization = serializer.Deserialize(reader);
-                festival = (Festival)deserialization;
+                /* using XDocument - same problem abounds
+                XDocument doc = new XDocument();
+                doc = XDocument.Parse(data.Result);
+                festival = (Festival)serializer.Deserialize(doc.CreateReader());*/
+                MessageBox.Show(reader.ToString());     /* test code */
                 
-                //MessageBox.Show(festival., "festival", MessageBoxButton.OK);
+                object deserialization = serializer.Deserialize(reader);
+                
+                MessageBox.Show(deserialization.ToString());
+                festival = (Festival)deserialization;
+
                 FilmItemList list = new FilmItemList(festival);
                 list.populateList();
 
                 //FilmItemList listTest = new FilmItemList();     /* test data */
                 
-                foreach (FilmItem item in listTest.Itemlist)
+                foreach (FilmItem item in list.Itemlist)
                 {
                     this.Items.Add(new ItemViewModel() { LineOne = item.lineone, LineTwo = item.linetwo, LineThree = item.linethree, LineFour = item.linefour });
                 }

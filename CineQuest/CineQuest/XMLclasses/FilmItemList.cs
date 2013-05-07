@@ -23,6 +23,9 @@ namespace CineQuest
             festival = f;
         }
 
+        /**
+         * Populates with test data
+         * */
         public FilmItemList()
         {
             Itemlist = new List<FilmItem>();
@@ -35,9 +38,9 @@ namespace CineQuest
          public void populateList()
          {
              Itemlist = new List<FilmItem>();
-             foreach (Film f in festival.films.films)
+             foreach (Film f in festival.films.filmsList)
              {
-                 foreach (Schedule s in festival.schedules.schedules)
+                 foreach (Schedule s in festival.schedules.schedulesList)
                  {
                      if (f.id.Equals(s.id))
                      {

@@ -56,6 +56,7 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
@@ -84,14 +85,8 @@
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="XMLclasses\Festival.cs" />
-    <Compile Include="XMLclasses\Film.cs" />
     <Compile Include="XMLclasses\FilmItem.cs" />
     <Compile Include="XMLclasses\FilmItemList.cs" />
-    <Compile Include="XMLclasses\Films.cs" />
-    <Compile Include="XMLclasses\ProgramItems.cs" />
-    <Compile Include="XMLclasses\Schedule.cs" />
-    <Compile Include="XMLclasses\Schedules.cs" />
-    <Compile Include="XMLclasses\VenueLocations.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
