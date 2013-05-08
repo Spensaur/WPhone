@@ -38,7 +38,8 @@ namespace CineQuest
          public void populateList()
          {
              Itemlist = new List<FilmItem>();
-             foreach (Film f in festival.films.filmsList)
+             /* Once entire Festival gets loaded this will work */
+             /*foreach (Film f in festival.films.filmsList)
              {
                  foreach (Schedule s in festival.schedules.schedulesList)
                  {
@@ -51,6 +52,16 @@ namespace CineQuest
                          Itemlist.Add(temp);
                      }
                  }
+             }*/
+
+             /* loads JUST films in the Festival object */
+             foreach (Film f in festival.films.filmsList)
+             {
+                 FilmItem temp = new FilmItem();
+                 temp.lineone = f.title;
+                 temp.linetwo = "start - end"; // s.startTime + " - " + s.endTime;
+                 temp.linefour = f.description;
+                 Itemlist.Add(temp);
              }
          }
     }

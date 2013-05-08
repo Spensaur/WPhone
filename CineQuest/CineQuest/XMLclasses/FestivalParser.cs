@@ -10,6 +10,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml;
 using System.IO;
+using System.Xml.Linq;
+using System.Linq;
+using System.Collections;
 
 namespace CineQuest.XMLclasses
 {
@@ -28,26 +31,74 @@ namespace CineQuest.XMLclasses
         {
             data = aData;
 
-            /* Create XmlReader convert string to Xml */
             XmlReader reader = XmlReader.Create(new StringReader(data));
-
+            /* jump to 'films' section */
+            reader.ReadToFollowing("films");
             while (reader.Read())
             {
-                
-                if (reader.Name.Equals("films"))
+                bool inFilm = false;
+                /* start reading into list each film */
+                if (reader.Name == "film")
                 {
-                    /* into <films> */
-                    MessageBox.Show(reader.HasAttributes.ToString());
-                    if (reader.HasAttributes)
+                    inFilm = true;
+                    Film temp = new Film();
+                    String tempName = "";
+                    String tempValue = "";
+                    temp.id = reader.GetAttribute(0);
+                    /* cycle through xml elements to pair elements to values */
+                    while (inFilm && reader.Read())
                     {
+                        switch (reader.NodeType)
+                        {
+                            case XmlNodeType.Element:
+                                tempName = reader.Name;
+                                break;
+                            case XmlNodeType.Text:
+                                tempValue = reader.Value;
+                                break;
+                            /* add name/value pairs to film object */
+                            case XmlNodeType.EndElement:
+                                if (tempName == "title")
+                                    temp.title = tempValue;
+                                else if (tempName == "description")
+                                    temp.description = tempValue;
+                                else if (tempName == "tagline")
+                                    temp.tagline = tempValue;
+                                else if (tempName == "genre")
+                                    temp.genre = tempValue;
+                                else if (tempName == "imageURL")
+                                    temp.imageURL = tempValue;
+                                else if (tempName == "director")
+                                    temp.director = tempValue;
+                                else if (tempName == "producer")
+                                    temp.producer = tempValue;
+                                else if (tempName == "cinematographer")
+                                    temp.cinematographer = tempValue;
+                                else if (tempName == "editor")
+                                    temp.editor = tempValue;
+                                else if (tempName == "cast")
+                                    temp.cast = tempValue;
+                                else if (tempName == "country")
+                                    temp.country = tempValue;
+                                else if (tempName == "language")
+                                    temp.language = tempValue;
+                                else if (tempName == "film_info")
+                                    temp.film_info = tempValue;
+                                tempValue = "";
+                                break;
+                        }   //switch
+                        /* at end of film tree, add created film object to festival film list */
+                        if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "film")
+                        {
+                            inFilm = false;
+                            festival.films.filmsList.Add(temp);
+                        }//if end of film tree
+                    }//while reading film's elements
+                }//if out of film tag
+            }//while nothing left to read
 
-                    }
-                    //MessageBox.Show(reader.Name.ToString());
-                }
-                
-            }
-
+            /* return the newly filled festival object */
             return festival;
-        }
-    }
+        }//parse()
+    }//class
 }

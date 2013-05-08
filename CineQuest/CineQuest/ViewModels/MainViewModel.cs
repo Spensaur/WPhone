@@ -113,7 +113,7 @@ namespace CineQuest
                     this.Items.Add(new ItemViewModel() { LineOne = item.lineone, LineTwo = item.linetwo, LineThree = item.linethree, LineFour = item.linefour });
                 }
             }
-            /*catch (Exception ex)
+            catch (Exception ex)
             {
                 //if (ex.GetType == )
                 {
@@ -121,8 +121,8 @@ namespace CineQuest
                     System.Diagnostics.Debug.WriteLine(ex.ToString());
                 }
 
-            }*/
-            //house keeping
+            }
+            /* house keeping */
             finally
             {
                 if (reader != null)
