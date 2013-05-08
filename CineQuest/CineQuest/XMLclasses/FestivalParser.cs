@@ -36,6 +36,7 @@ namespace CineQuest.XMLclasses
             reader.ReadToFollowing("films");
             while (reader.Read())
             {
+                /** Read the films from the xml **/
                 bool inFilm = false;
                 /* start reading into list each film */
                 if (reader.Name == "film")
@@ -97,6 +98,32 @@ namespace CineQuest.XMLclasses
                 }//if out of film tag
             }//while nothing left to read
 
+            /* restart reader */
+            reader = XmlReader.Create(new StringReader(data));
+            reader.ReadToFollowing("schedules");
+            while (reader.Read())
+            {
+                /** Read the films from the xml **/
+                /* start reading into list each film */
+                if (reader.Name == "schedule")
+                {
+                    /** Read the schedule into the festival **/
+                    bool inSchedule = false;
+                    /* start reading into list each schedule */
+                    if (reader.Name == "schedule")
+                    {
+                        inSchedule = true;
+                        Schedule temp = new Schedule();
+                        temp.id = reader.GetAttribute(0);
+                        temp.programItemId = reader.GetAttribute(1);
+                        temp.startTime = reader.GetAttribute(2);
+                        temp.endTime = reader.GetAttribute(3);
+                        temp.venue = reader.GetAttribute(4);
+                        festival.schedules.schedulesList.Add(temp);
+                    }//if out of schedule tag
+                }
+            }
+            
             /* return the newly filled festival object */
             return festival;
         }//parse()

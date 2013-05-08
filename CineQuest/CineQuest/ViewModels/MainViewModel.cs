@@ -102,7 +102,6 @@ namespace CineQuest
 
                 parser = new FestivalParser();
                 festival = parser.Parse(data.Result);
-                
 
                 FilmItemList list = new FilmItemList(festival);
                 list.populateList();

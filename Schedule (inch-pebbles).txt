@@ -12,3 +12,6 @@ Week 3?
 
 Week Whatever
   The Xml deserializer isn't cooperating with the XML files and I hate it.
+
+5/8
+New parser written by hand. Needs to get rest of data from XML; currently just pulls films.
