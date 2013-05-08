@@ -19,9 +19,8 @@ namespace CineQuest
     [XmlRoot("festival")]
     public class Festival
     {
-        /* Later */
-        //[XmlElement("program_items")]
-        //public ProgramItems programItems  { get; set; }
+        [XmlElement("program_items")]
+        public ProgramItems programItems  { get; set; }
 
         [XmlElement("films")]
         public Films films { get; set; }
@@ -29,14 +28,15 @@ namespace CineQuest
         [XmlElement("schedules")]
         public Schedules schedules { get; set; }
 
-        /* Later */
-        //[XmlElement("venue_Locations")]
-        //public VenueLocations venueLocations { get; set; }
+        [XmlElement("venue_Locations")]
+        public VenueLocations venueLocations { get; set; }
 
         public Festival()
         {
             films = new Films();
             schedules = new Schedules();
+            programItems = new ProgramItems();
+            venueLocations = new VenueLocations();
         }
     }
 
@@ -125,5 +125,74 @@ namespace CineQuest
 
         [XmlElementAttribute("venue")]
         public string venue { get; set; }
+    }
+
+    /**
+     * Program items
+     */
+    [XmlRoot(ElementName = "program_items")]
+    public class ProgramItems
+    {
+        [XmlArray("program_items")]
+        [XmlArrayItem("program_item", typeof(ProgramItem))]
+        public List<ProgramItem> programItems { get; set; }
+
+        public ProgramItems()
+        {
+            programItems = new List<ProgramItem>();
+        }
+    }
+
+    public class ProgramItem
+    {
+        [XmlElementAttribute("id")]
+        public string id { get; set; }
+
+        [XmlElementAttribute("title")]
+        public string title { get; set; }
+
+        [XmlElementAttribute("description")]
+        public string description { get; set; }
+
+        public List<int> films { get; set; }
+
+        public ProgramItem()
+        {
+            films = new List<int>();
+        }
+    }
+
+    /**
+     * Venue locations for program items
+     */
+    [XmlRoot(ElementName = "venu_locations")]
+    public class VenueLocations
+    {
+        [XmlArray("venue_locations")]
+        [XmlArrayItem("venue_location", typeof(VenueLocation))]
+        public List<VenueLocation> venueLocationList { get; set; }
+
+        public VenueLocations()
+        {
+            venueLocationList = new List<VenueLocation>();
+        }
+    }
+
+    public class VenueLocation
+    {
+        [XmlElementAttribute("venue")]
+        public string venue { get; set; }
+
+        [XmlElementAttribute("description")]
+        public string description { get; set; }
+
+        [XmlElementAttribute("location")]
+        public string location { get; set; }
+
+        [XmlElementAttribute("imageURL")]
+        public string imageURL { get; set; }
+
+        [XmlElementAttribute("directionsURL")]
+        public string directionsURL { get; set; }
     }
 }

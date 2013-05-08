@@ -123,7 +123,107 @@ namespace CineQuest.XMLclasses
                     }//if out of schedule tag
                 }
             }
-            
+
+            /* restart reader */
+            reader = XmlReader.Create(new StringReader(data));
+            /* jump to 'venue locations' section */
+            reader.ReadToFollowing("venue_locations");
+            while (reader.Read())
+            {
+                /** Read the venue locations from the xml **/
+                bool inVenueLocation = false;
+                /* start reading into list each venue location */
+                if (reader.Name == "venue_location")
+                {
+                    inVenueLocation = true;
+                    VenueLocation temp = new VenueLocation();
+                    String tempName = "";
+                    String tempValue = "";
+                    temp.venue = reader.GetAttribute(0);
+                    /* cycle through xml elements to pair elements to values */
+                    while (inVenueLocation && reader.Read())
+                    {
+                        switch (reader.NodeType)
+                        {
+                            case XmlNodeType.Element:
+                                tempName = reader.Name;
+                                break;
+                            case XmlNodeType.Text:
+                                tempValue = reader.Value;
+                                break;
+                            /* add name/value pairs to venue location object */
+                            case XmlNodeType.EndElement:
+                                if (tempName == "description")
+                                    temp.description = tempValue;
+                                else if (tempName == "location")
+                                    temp.location = tempValue;
+                                else if (tempName == "imageURL")
+                                    temp.imageURL = tempValue;
+                                else if (tempName == "directionsURL")
+                                    temp.directionsURL = tempValue;
+                                tempValue = "";
+                                break;
+                        }   //switch
+                        /* at end of venue location tree, add created venue location object to festival venue location list */
+                        if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "venue_location")
+                        {
+                            inVenueLocation = false;
+                            festival.venueLocations.venueLocationList.Add(temp);
+                        }//if end of venue location tree
+                    }//while reading venue location's elements
+                }//if out of venue locations tag
+            }//while nothing left to read
+
+            /* restart reader */
+            reader = XmlReader.Create(new StringReader(data));
+            /* jump to 'program items' section */
+            reader.ReadToFollowing("program_items");
+            while (reader.Read())
+            {
+                /** Read the program items from the xml **/
+                bool inProgramItem = false;
+                /* start reading into list each program item */
+                if (reader.Name == "program_item")
+                {
+                    inProgramItem = true;
+                    ProgramItem temp = new ProgramItem();
+                    String tempName = "";
+                    String tempValue = "";
+                    temp.id = reader.GetAttribute(0);
+                    /* cycle through xml elements to pair elements to values */
+                    while (inProgramItem && reader.Read())
+                    {
+                        switch (reader.NodeType)
+                        {
+                            case XmlNodeType.Element:
+                                tempName = reader.Name;
+                                if (tempName.Equals("film"))
+                                    tempValue = reader.GetAttribute(0);
+                                break;
+                            case XmlNodeType.Text:
+                                tempValue = reader.Value;
+                                break;
+                            /* add name/value pairs to venue location object */
+                            case XmlNodeType.EndElement:
+                                if (tempName == "title")
+                                    temp.title = tempValue;
+                                else if (tempName == "description")
+                                    temp.description = tempValue;
+                                else if (tempName == "film")
+                                    temp.films.Add(Convert.ToInt16(tempValue));
+                                tempValue = "";
+                                break;
+                        }   //switch
+                        /* at end of venue location tree, add created venue location object to festival venue location list */
+                        if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "program_item")
+                        {
+                            inProgramItem = false;
+                            festival.programItems.programItems.Add(temp);
+                        }//if end of venue location tree
+                    }//while reading venue location's elements
+                }//if out of venue locations tag
+            }//while nothing left to read
+
             /* return the newly filled festival object */
             return festival;
         }//parse()
