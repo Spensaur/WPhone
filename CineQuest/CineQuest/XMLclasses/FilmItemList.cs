@@ -49,31 +49,7 @@ namespace CineQuest
                 Itemlist.Add(temp);
             }
 
-            /* Once entire Festival gets loaded this will work
-            foreach (Film f in festival.films.filmsList)
-            {
-                foreach (ProgramItem p in festival.programItems.programItems)
-                {
-                    foreach (int fid in p.films)
-                    {
-                        String fString = "" + fid;
-                        if (fString.Equals(f.id))
-                        {
-                            foreach (Schedule s in festival.schedules.schedulesList)
-                            {
-                                if (p.id.Equals(s.programItemId))
-                                {
-                                    FilmItem temp = new FilmItem();
-                                    temp.lineone = f.title;
-                                    temp.linetwo = s.startTime + " - " + s.endTime;
-                                    temp.linefour = f.description;
-                                    Itemlist.Add(temp);
-                                }
-                            }
-                        }
-                    }
-                }
-            } */
+            Itemlist.Sort();
         }
     }
 }

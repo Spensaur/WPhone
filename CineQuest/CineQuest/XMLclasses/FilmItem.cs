@@ -14,7 +14,7 @@ using System.Collections.Generic;
 namespace CineQuest
 {
     //used by FilmItemList to populate the film page
-    public class FilmItem
+    public class FilmItem:IComparable<FilmItem>
     {
         Films films = new Films();
 
@@ -37,6 +37,12 @@ namespace CineQuest
         public FilmItem()
         {
             
+        }
+
+        /* make filmitems sortable by film title */
+        public int CompareTo(FilmItem other)
+        {
+            return title.CompareTo(other.title);
         }
     }
 }

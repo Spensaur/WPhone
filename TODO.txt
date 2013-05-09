@@ -1,1 +1,6 @@
 Add images to film detail page
+
+stop it from loading and parsing the XML page every time the films view shows up
+
+include schedules ability into films
+
