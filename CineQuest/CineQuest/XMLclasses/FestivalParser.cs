@@ -219,9 +219,9 @@ namespace CineQuest.XMLclasses
                         {
                             inProgramItem = false;
                             festival.programItems.programItems.Add(temp);
-                        }//if end of venue location tree
-                    }//while reading venue location's elements
-                }//if out of venue locations tag
+                        }//if end of program item tree
+                    }//while reading program item's elements
+                }//if out of program item tag
             }//while nothing left to read
 
             /* return the newly filled festival object */

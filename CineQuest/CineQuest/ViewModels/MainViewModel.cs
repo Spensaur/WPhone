@@ -109,7 +109,24 @@ namespace CineQuest
                 //FilmItemList listTest = new FilmItemList();     /* test data */
                 foreach (FilmItem item in list.Itemlist)
                 {
-                    this.Items.Add(new ItemViewModel() { LineOne = item.lineone, LineTwo = item.linetwo, LineThree = item.linethree, LineFour = item.linefour });
+                    /* connect films in ItemList to UI elements */
+                    this.Items.Add(new ItemViewModel() {
+                        IVMid = item.id,
+                        IVMtitle = item.title,
+                        IVMdescription = item.description,
+                        IVMtagline = item.tagline,
+                        IVMgenre = item.genre,
+                        IVMimageURL = item.imageURL,
+                        IVMdirector = item.director,
+                        IVMproducer = item.producer,
+                        IVMcinematographer = item.cinematographer,
+                        IVMeditor = item.editor,
+                        IVMcast = item.cast,
+                        IVMcountry = item.country,
+                        IVMlanguage = item.language,
+                        IVMfilminfo = item.filminfo,
+                        IVMshowtimes = item.showtimes
+                    });
                 }
             }
             catch (Exception ex)

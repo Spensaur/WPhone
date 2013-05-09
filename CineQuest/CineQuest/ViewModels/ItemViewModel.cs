@@ -10,91 +10,323 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace CineQuest
 {
     public class ItemViewModel : INotifyPropertyChanged
     {
-        private string _lineOne;
+        private string _IVMid;
         /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// id
         /// </summary>
         /// <returns></returns>
-        public string LineOne
+        public string IVMid
         {
             get
             {
-                return _lineOne;
+                return _IVMid;
             }
             set
             {
-                if (value != _lineOne)
+                if (value != _IVMid)
                 {
-                    _lineOne = value;
-                    NotifyPropertyChanged("LineOne");
+                    _IVMid = value;
+                    NotifyPropertyChanged("IVMid");
                 }
             }
         }
 
-        private string _lineTwo;
+        private string _IVMtitle;
         /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// title
         /// </summary>
         /// <returns></returns>
-        public string LineTwo
+        public string IVMtitle
         {
             get
             {
-                return _lineTwo;
+                return _IVMtitle;
             }
             set
             {
-                if (value != _lineTwo)
+                if (value != _IVMtitle)
                 {
-                    _lineTwo = value;
-                    NotifyPropertyChanged("LineTwo");
+                    _IVMtitle = value;
+                    NotifyPropertyChanged("IVMtitle");
                 }
             }
         }
 
-        private string _lineThree;
+        private string _IVMdescription;
         /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// description
         /// </summary>
         /// <returns></returns>
-        public string LineThree
+        public string IVMdescription
         {
             get
             {
-                return _lineThree;
+                return _IVMdescription;
             }
             set
             {
-                if (value != _lineThree)
+                if (value != _IVMdescription)
                 {
-                    _lineThree = value;
-                    NotifyPropertyChanged("LineThree");
+                    _IVMdescription = value;
+                    NotifyPropertyChanged("IVMdescription");
                 }
             }
         }
 
-        private string _lineFour;
+        private string _IVMtagline;
         /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// tagline
         /// </summary>
         /// <returns></returns>
-        public string LineFour
+        public string IVMtagline
         {
             get
             {
-                return _lineFour;
+                return _IVMtagline;
             }
             set
             {
-                if (value != _lineFour)
+                if (value != _IVMtagline)
                 {
-                    _lineFour = value;
-                    NotifyPropertyChanged("LineFour");
+                    _IVMtagline = value;
+                    NotifyPropertyChanged("IVMtagline");
+                }
+            }
+        }
+
+        private string _IVMgenre;
+        /// <summary>
+        /// genre.
+        /// </summary>
+        /// <returns></returns>
+        public string IVMgenre
+        {
+            get
+            {
+                return _IVMgenre;
+            }
+            set
+            {
+                if (value != _IVMgenre)
+                {
+                    _IVMgenre = value;
+                    NotifyPropertyChanged("IVMgenre");
+                }
+            }
+        }
+
+        private string _IVMimageURL;
+        /// <summary>
+        /// imageURL
+        /// </summary>
+        /// <returns></returns>
+        public string IVMimageURL
+        {
+            get
+            {
+                return _IVMimageURL;
+            }
+            set
+            {
+                if (value != _IVMimageURL)
+                {
+                    _IVMimageURL = value;
+                    NotifyPropertyChanged("IVMimageURL");
+                }
+            }
+        }
+
+        private string _IVMdirector;
+        /// <summary>
+        /// director
+        /// </summary>
+        /// <returns></returns>
+        public string IVMdirector
+        {
+            get
+            {
+                return _IVMdirector;
+            }
+            set
+            {
+                if (value != _IVMdirector)
+                {
+                    _IVMdirector = value;
+                    NotifyPropertyChanged("IVMdirector");
+                }
+            }
+        }
+
+        private string _IVMproducer;
+        /// <summary>
+        /// producer
+        /// </summary>
+        /// <returns></returns>
+        public string IVMproducer
+        {
+            get
+            {
+                return _IVMproducer;
+            }
+            set
+            {
+                if (value != _IVMproducer)
+                {
+                    _IVMproducer = value;
+                    NotifyPropertyChanged("IVMproducer");
+                }
+            }
+        }
+
+        private string _IVMcinematographer;
+        /// <summary>
+        /// cinematographer
+        /// </summary>
+        /// <returns></returns>
+        public string IVMcinematographer
+        {
+            get
+            {
+                return _IVMcinematographer;
+            }
+            set
+            {
+                if (value != _IVMcinematographer)
+                {
+                    _IVMcinematographer = value;
+                    NotifyPropertyChanged("IVMcinematographer");
+                }
+            }
+        }
+
+        private string _IVMeditor;
+        /// <summary>
+        /// editor
+        /// </summary>
+        /// <returns></returns>
+        public string IVMeditor
+        {
+            get
+            {
+                return _IVMeditor;
+            }
+            set
+            {
+                if (value != _IVMeditor)
+                {
+                    _IVMeditor = value;
+                    NotifyPropertyChanged("IVMeditor");
+                }
+            }
+        }
+
+        private string _IVMcast;
+        /// <summary>
+        /// cast
+        /// </summary>
+        /// <returns></returns>
+        public string IVMcast
+        {
+            get
+            {
+                return _IVMcast;
+            }
+            set
+            {
+                if (value != _IVMcast)
+                {
+                    _IVMcast = value;
+                    NotifyPropertyChanged("IVMcast");
+                }
+            }
+        }
+
+        private string _IVMcountry;
+        /// <summary>
+        /// country
+        /// </summary>
+        /// <returns></returns>
+        public string IVMcountry
+        {
+            get
+            {
+                return _IVMcountry;
+            }
+            set
+            {
+                if (value != _IVMcountry)
+                {
+                    _IVMcountry = value;
+                    NotifyPropertyChanged("IVMcountry");
+                }
+            }
+        }
+
+        private string _IVMlanguage;
+        /// <summary>
+        /// language
+        /// </summary>
+        /// <returns></returns>
+        public string IVMlanguage
+        {
+            get
+            {
+                return _IVMlanguage;
+            }
+            set
+            {
+                if (value != _IVMlanguage)
+                {
+                    _IVMlanguage = value;
+                    NotifyPropertyChanged("IVMlanguage");
+                }
+            }
+        }
+
+        private string _IVMfilminfo;
+        /// <summary>
+        /// film info
+        /// </summary>
+        /// <returns></returns>
+        public string IVMfilminfo
+        {
+            get
+            {
+                return _IVMfilminfo;
+            }
+            set
+            {
+                if (value != _IVMfilminfo)
+                {
+                    _IVMfilminfo = value;
+                    NotifyPropertyChanged("IVMfilminfo");
+                }
+            }
+        }
+
+        private List<String> _IVMshowtimes;
+        /// <summary>
+        /// showtimes + venue
+        /// </summary>
+        /// <returns></returns>
+        public List<String> IVMshowtimes
+        {
+            get
+            {
+                return _IVMshowtimes;
+            }
+            set
+            {
+                if (value != _IVMshowtimes)
+                {
+                    _IVMshowtimes = value;
+                    NotifyPropertyChanged("IVMshowtimes");
                 }
             }
         }

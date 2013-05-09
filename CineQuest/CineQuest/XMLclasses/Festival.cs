@@ -95,6 +95,8 @@ namespace CineQuest
 
         [XmlElement("film_info")]
         public string film_info { get; set; }
+
+        public List<String> show_times { get; set; }
     }
 
     public class Schedules

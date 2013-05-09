@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Runtime.Serialization;
+using System.Collections.Generic;
 
 namespace CineQuest
 {
@@ -17,22 +18,25 @@ namespace CineQuest
     {
         Films films = new Films();
 
-        public String lineone { get; set; }
-        public String linetwo { get; set; }
-        public String linethree { get; set; }
-        public String linefour { get; set; }
+        public String id { get; set; }
+        public String title { get; set; }
+        public String description { get; set; }
+        public String tagline { get; set; }
+        public String genre { get; set; }
+        public String imageURL { get; set; }
+        public String director { get; set; }
+        public String producer { get; set; }
+        public String cinematographer { get; set; }
+        public String editor { get; set; }
+        public String cast { get; set; }
+        public String country { get; set; }
+        public String language { get; set; }
+        public String filminfo { get; set; }
+        public List<String> showtimes { get; set; }
 
         public FilmItem()
         {
             
-        }
-
-        public FilmItem(String aone, String atwo, String athree, String afour)
-        {
-            lineone = aone;
-            linetwo = atwo;
-            linethree = athree;
-            linefour = afour;
         }
     }
 }
