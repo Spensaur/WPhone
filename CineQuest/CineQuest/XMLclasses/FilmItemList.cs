@@ -42,7 +42,9 @@ namespace CineQuest
             {
                 foreach (Schedule s in festival.schedules.schedulesList)
                 {
-                    if (f.id.Equals(s.id))
+                    String fTemp = f.id.Substring(1);
+                    String sTemp = s.id.Substring(1);
+                    if (fTemp.Equals(sTemp))
                     {
                         FilmItem temp = new FilmItem();
                         temp.lineone = f.title;
