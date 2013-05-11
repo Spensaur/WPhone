@@ -1,4 +1,7 @@
-﻿using System;
+﻿/** Each film object gets put here to populate the UI elements
+ */
+
+using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,7 +16,7 @@ using System.Collections.Generic;
 
 namespace CineQuest
 {
-    //used by FilmItemList to populate the film page
+    /* Fills the filmlist */
     public class FilmItem:IComparable<FilmItem>
     {
         Films films = new Films();
@@ -39,7 +42,7 @@ namespace CineQuest
             
         }
 
-        /* make filmitems sortable by film title */
+        /* Custom CompareTo so filmitems are sortable by film title */
         public int CompareTo(FilmItem other)
         {
             return title.CompareTo(other.title);

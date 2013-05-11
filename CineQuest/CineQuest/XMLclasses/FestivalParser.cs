@@ -1,4 +1,20 @@
-﻿using System;
+﻿/** Parses a passed in XML file into a festival object, then returns the object. Eats up memory by re-creating the XmlReader
+ * each time rather than restarting to the beginning or reading it from top to bottom (because it was built piece-meal).
+ * 
+ * XML cheat sheet:
+ *   <title id="0000">  elements are between the <> tags
+ *                        reader.Name gets the name of the element  --  title
+ *                        XmlNodeType.Element
+ *                      attributes are inside the <> tags and followed by =""
+ *                        reader.GetAttribute(index)  -- 0000
+ *                        gotta keep track of these by knowing they layout of the XML doc and counting with zero-index
+ *   <description>      values are enclosed by matching <></> tags, typically the words they enclose
+ *     Words!             reader.Value
+ *                        XmlNodeType.Text
+ *   </description>
+ */
+
+using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,7 +54,7 @@ namespace CineQuest.XMLclasses
             {
                 /** Read the films from the xml **/
                 bool inFilm = false;
-                /* start reading into list each film */
+                /* reads in one film element at a time then adds to festival object */
                 if (reader.Name == "film")
                 {
                     inFilm = true;
@@ -88,7 +104,7 @@ namespace CineQuest.XMLclasses
                                 tempValue = "";
                                 break;
                         }   //switch
-                        /* at end of film tree, add created film object to festival film list */
+                        /* at end of film element tree, add created film object to festival film list */
                         if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "film")
                         {
                             inFilm = false;
@@ -103,11 +119,11 @@ namespace CineQuest.XMLclasses
             reader.ReadToFollowing("schedules");
             while (reader.Read())
             {
-                /** Read the films from the xml **/
-                /* start reading into list each film */
+                /** Read the schedules from the xml **/
+                /* start reading into each schedule */
                 if (reader.Name == "schedule")
                 {
-                    /** Read the schedule into the festival **/
+                    /* not used since all the schedule data is included as attributes, not a value enclosed by tags */
                     bool inSchedule = false;
                     /* start reading into list each schedule */
                     if (reader.Name == "schedule")
@@ -121,8 +137,8 @@ namespace CineQuest.XMLclasses
                         temp.venue = reader.GetAttribute(4);
                         festival.schedules.schedulesList.Add(temp);
                     }//if out of schedule tag
-                }
-            }
+                }//if out of schedule element (kinda redundant, fix this)
+            }//while out of reading schedules
 
             /* restart reader */
             reader = XmlReader.Create(new StringReader(data));
@@ -132,7 +148,7 @@ namespace CineQuest.XMLclasses
             {
                 /** Read the venue locations from the xml **/
                 bool inVenueLocation = false;
-                /* start reading into list each venue location */
+                /* start reading into a temp element each venue location */
                 if (reader.Name == "venue_location")
                 {
                     inVenueLocation = true;

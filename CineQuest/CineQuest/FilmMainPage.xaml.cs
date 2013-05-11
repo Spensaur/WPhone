@@ -1,4 +1,8 @@
-﻿using System;
+﻿/** Code for the UI layout of the main film page. Lists alphabetically and clicking on a film opens
+ * the film detail page. No class manipulation is done here, just linking classes to UI elements.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -19,56 +23,59 @@ namespace CineQuest
 {
     public partial class FilmMainPage : PhoneApplicationPage
     {
-        // Constructor
+        /* Constructor */
         public FilmMainPage()
         {
             InitializeComponent();
 
-            // Set the data context of the listbox control to the sample data
+            /* Set the data context of the listbox control to the sample data */
             DataContext = App.ViewModel;
             this.Loaded += new RoutedEventHandler(FilmMainPage_Loaded);
 
         }
 
+        /* Each button in the ApplicationBar of the screen gets it's own click listener. Currently
+         * they redirect to the other pages.
+         */
         void eventsButton_Click(object sender, EventArgs e)
         {
-            // Navigate to Events page
+            /* Navigate to Events page */
             NavigationService.Navigate(new Uri("/EventsMainPage.xaml", UriKind.Relative));
         }
 
         void forumsButton_Click(object sender, EventArgs e)
         {
-            // Navigate to Forums page
+            /* Navigate to Forums page */
             NavigationService.Navigate(new Uri("/ForumsMainPage.xaml", UriKind.Relative));
         }
 
         void dvdsButton_Click(object sender, EventArgs e)
         {
-            // Navigate to DVD page
+            /* Navigate to DVD page */
             NavigationService.Navigate(new Uri("/DVDMainPage.xaml", UriKind.Relative));
         }
 
         void scheduleButton_Click(object sender, EventArgs e)
         {
-            // Navigate to Schedule page
+            /* Navigate to Schedule page */
             NavigationService.Navigate(new Uri("/ScheduleMainPage.xaml", UriKind.Relative));
         }
 
-        // Handle selection changed on ListBox
+        /* Handle selection changed on ListBox */
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // If selected index is -1 (no selection) do nothing
+            /* If selected index is -1 (no selection) do nothing */
             if (MainListBox.SelectedIndex == -1)
                 return;
 
-            // Navigate to the new page
+            /* Navigate to the new page */
             NavigationService.Navigate(new Uri("/FilmDetailsPage.xaml?selectedItem=" + MainListBox.SelectedIndex, UriKind.Relative));
 
-            // Reset selected index to -1 (no selection)
+            /* Reset selected index to -1 (no selection) */
             MainListBox.SelectedIndex = -1;
         }
-
-        // Load data for the ViewModel Items
+        
+        /* Load data for the ViewModel Items */
         private void FilmMainPage_Loaded(object sender, RoutedEventArgs e)
         {
             if (!App.ViewModel.IsDataLoaded)

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/** The whole enchilada. A this is what holds the parsed XML data. There are [Xml] tags because originally
+ * this was going to be populated by deserializing the XML data, easier said then done; deserialization is tricky
+ * and very poorly documented. The parser now takes care of that, but if you figure it out it's much faster than
+ * using the parser (if not as customizable).
+ */
+
+using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,8 +20,9 @@ using System.Runtime.Serialization;
 
 namespace CineQuest
 {
-    //[Serializable()]
-    //This is the main head of the XML data object
+    /**
+     * This is the main head of the XML data object
+     */
     [XmlRoot("festival")]
     public class Festival
     {
@@ -40,6 +47,9 @@ namespace CineQuest
         }
     }
 
+    /**
+     * List of films to vary size automatically
+     */
     public class Films
     {
         [XmlArray("films")]
@@ -52,6 +62,9 @@ namespace CineQuest
         }
     }
 
+    /**
+     * Individual film object, holds all info from XML doc
+     */
     public class Film
     {
         [XmlElementAttribute("id")]
@@ -99,6 +112,9 @@ namespace CineQuest
         public List<String> show_times { get; set; }
     }
 
+    /**
+     * List of schedules
+     */
     public class Schedules
     {
         [XmlArray("schedules")]
@@ -111,6 +127,9 @@ namespace CineQuest
         }
     }
 
+    /**
+     * Schedule object
+    */
     public class Schedule
     {
         [XmlElementAttribute("id")]
@@ -130,7 +149,7 @@ namespace CineQuest
     }
 
     /**
-     * Program items
+     * List of program items
      */
     [XmlRoot(ElementName = "program_items")]
     public class ProgramItems
@@ -145,6 +164,9 @@ namespace CineQuest
         }
     }
 
+    /**
+     * ProgramItem holds details
+     */
     public class ProgramItem
     {
         [XmlElementAttribute("id")]
@@ -180,6 +202,9 @@ namespace CineQuest
         }
     }
 
+    /**
+     * Venue location information
+     */
     public class VenueLocation
     {
         [XmlElementAttribute("venue")]

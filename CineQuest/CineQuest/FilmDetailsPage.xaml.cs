@@ -16,13 +16,13 @@ namespace CineQuest
 {
     public partial class FilmDetailsPage : PhoneApplicationPage
     {
-        // Constructor
+        /* Constructor */
         public FilmDetailsPage()
         {
             InitializeComponent();
         }
 
-        // When page is navigated to set data context to selected item in list
+        /* When page is navigated to set data context to selected item in list */
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string selectedIndex = "";

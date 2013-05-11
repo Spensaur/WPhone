@@ -1,4 +1,8 @@
-﻿using System;
+﻿/** This is where the ViewModel pulls to populate the UI elements. It has to be synced 
+ * with the data in the festival object.
+ */
+
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;

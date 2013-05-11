@@ -1,4 +1,7 @@
-﻿using System;
+﻿/** Holds all the FilmItems as well as the festival object that populates it.
+ */
+
+using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace CineQuest
 {
-    //This class creates a list of filmitems to populate the film page.
+    /* This class creates a list of filmitems to populate the film page. */
     public class FilmItemList
     {
         public List<FilmItem> Itemlist;

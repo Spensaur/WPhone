@@ -53,7 +53,8 @@
                 IconUri="/Images/Icons/icon_schedule_small.png"
                 Text="Schedule"
                 Click="scheduleButton_Click" />
-            <!--<shell:ApplicationBar.MenuItems>
+            <!-- Not useful in this application (yet?)
+                <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
             </shell:ApplicationBar.MenuItems>-->
